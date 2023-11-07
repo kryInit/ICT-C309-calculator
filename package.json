@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "antlr4ts": "cd ./src/antlr/grammar && antlr4ts -o ../../../src/antlr/generated/cond-expr CondExpr.g4"
+    "antlr4ts": "cd ./src/antlr/grammar && antlr4ts -o ../../../src/antlr/generated/expr Expr.g4"
   },
   "dependencies": {
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
