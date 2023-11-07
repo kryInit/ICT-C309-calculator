@@ -8,6 +8,10 @@ import * as path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: "/ICT-C309-calculator/",
+  server: {
+    host: "0.0.0.0",
+  },
   resolve: {
     alias: {
       util: 'rollup-plugin-node-polyfills/polyfills/util',
