@@ -6,7 +6,7 @@ type VimStateButtonProps = {
     style: React.CSSProperties | undefined,
 };
 const VimStateButton: FC<VimStateButtonProps> = ({vimActivator, style = undefined}) => {
-    const [enabledVim, setEnabledVim] = useState(true);
+    const [enabledVim, setEnabledVim] = useState(false);
 
     return (
         <button

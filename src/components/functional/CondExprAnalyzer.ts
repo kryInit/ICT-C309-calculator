@@ -1,9 +1,9 @@
-import {CharStreams, CommonTokenStream, ParserRuleContext} from "antlr4ts";
+import {CharStreams, CommonTokenStream} from "antlr4ts";
 import * as Lexer from "~/antlr/generated/expr/ExprLexer";
 import * as Parser from "~/antlr/generated/expr/ExprParser";
 
 
-export const analyzeWithANTLR = (modelLang: string): Parser.ExprContext | null => {
+export const analyzeWithANTLR = (modelLang: string): Parser.ExpressionContext | null => {
     try {
         const inputStream = CharStreams.fromString(modelLang);
         const lexer = new Lexer.ExprLexer(inputStream);
@@ -15,8 +15,7 @@ export const analyzeWithANTLR = (modelLang: string): Parser.ExprContext | null =
                 throw null;
             }
         });
-        const expr = parser.expr();
-        return expr;
+        return parser.expression();
     } catch(e: any) {
         return null;
     }

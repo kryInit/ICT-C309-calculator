@@ -1,5 +1,7 @@
 grammar Expr;
 
+expression: expr EOF;
+
 expr
     : '(' expr ')'                                         # parenthesisExpr
     | 'if'        cond+=expr '{' expr '}'

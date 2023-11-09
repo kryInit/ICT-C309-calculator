@@ -13,7 +13,7 @@ export const setupMonacoVim = (
     monaco: Monaco,
     statusNode: Element,
     setMonacoVimActivator:React.Dispatch<React.SetStateAction<MonacoVimActivator>> | undefined = undefined,
-    startWithVimMode: boolean = true,
+    startWithVimMode: boolean = false,
     useRequireJS: boolean = true,
 ) => {
     // require jsの方じゃないとnormal modeでキャレットが太くならない(謎
